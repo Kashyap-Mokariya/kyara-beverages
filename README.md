@@ -28,7 +28,7 @@ Kyara Beverages is a modern and stylish landing page for a premium beverage bran
 
 Ensure you have the following installed:  
 - **Node.js** (v18 or later)  
-- **pnpm** (Package Manager)  
+- **pnpm / npm** (Package Manager)  
 
 ### 1️⃣ Clone the Repository  
 
