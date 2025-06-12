@@ -1,0 +1,115 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kyara Beverages Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 189 85% 31%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 28 76% 67%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 189 85% 31%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 189 85% 31%;
+
+    --radius: 0.75rem;
+
+    /* Kyara Brand Colors */
+    --kyara-teal: 189 85% 31%;
+    --kyara-teal-light: 189 85% 45%;
+    --kyara-orange: 28 76% 67%;
+    --kyara-orange-light: 28 76% 75%;
+    --kyara-navy: 222 84% 15%;
+    --kyara-cream: 45 100% 98%;
+    --kyara-sage: 156 23% 60%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 189 85% 45%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 28 76% 75%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 189 85% 45%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 189 85% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--kyara-teal)) 0%, hsl(var(--kyara-teal-light)) 50%, hsl(var(--kyara-orange)) 100%);
+  }
+  
+  .bg-card-gradient {
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--kyara-cream)) 100%);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-100px) translateX(70px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
